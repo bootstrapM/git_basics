@@ -1,10 +1,10 @@
 # git_basics
 
-to initiate a directory with git do git int
+to initiate a directory with git do ```git int```
 
-instead to clone from a remote directory do git clone <url>
+instead to clone from a remote directory do ```git clone <url>```
 
-git status: shows the modified files in the current working directory 
+```git status``` shows (1) the current branch (2) the modified files in the current working directory  
 
 git add <file_name>: this command stages all file as it looks at the time of executing the command which are ready to be committed
 
