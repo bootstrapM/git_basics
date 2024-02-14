@@ -255,7 +255,7 @@ This shows the URLs that Git has stored for the shortname to be used when readin
 
 If you have more than one remote, the command lists them all.
 
-On the other hand if you used `git init` to locally create a Gir repository and want to attach a remote repository to it, run 
+On the other hand if you used `git init` to locally create a Gir repository and want to attach a remote repository to it, run the following
 
 `git remote add <alias> <url>`
 
