@@ -199,7 +199,7 @@ This reverts the file `<file>` back to what it looked like when you last committ
 
 It’s important to understand that git checkout -- <file> is a dangerous command. Any local changes you made to that file are gone — Git just replaced that file with the last staged or committed version. Don’t ever use this command unless you absolutely know that you don’t want those unsaved local changes.
 
-### `git restore`: Undoing things 
+### Undoing things 
 The command
 
 `git restore --staged <file_to_be_unstaged>` 
@@ -211,6 +211,17 @@ The command
 `git restore <file>` 
 
 discards changes to `<file>` in working directory. It revert it back to what it looked like when you last committed. It is basically an alternative for `git checkout -- <file>`. Likewise, it is important to understand that git checkout -- <file> is a dangerous command. Any local changes you made to that file are gone — Git just replaced that file with the last staged or committed version. Don’t ever use this command unless you absolutely know that you don’t want those unsaved local changes.
+
+We can also use `git restore` to un-commit changes. For instance, if we want to go one commit back then execute
+
+`git reset HEAD~1`
+
+To go back multiple commits run
+
+`git reset <commit_hash>`
+`git reset --hard <commit_hash>`
+
+where `commit_hash` is commit hash number. This essentially rewriting history. 
 
 ### Viewing commit history
 
@@ -243,6 +254,10 @@ If you’ve cloned your repository, running `git remote`  should at least show `
 This shows the URLs that Git has stored for the shortname to be used when reading and writing to that remote.  
 
 If you have more than one remote, the command lists them all.
+
+On the other hand if you used `git init` to locally create a Gir repository and want to attach a remote repository to it, run 
+
+`git remote add <alias> <url>`
 
 ### Fetching and Pulling from Your Remotes
 
